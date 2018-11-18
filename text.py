@@ -1,19 +1,22 @@
 import json
+from pprint import pprint
 
-json_data = {
-        "name": "musical",
-        "collaborative": "false",
-        "pid": 5,
-        "modified_at": 1493424000,
-        "num_albums": 7,
-        "num_tracks": 12,
-        "num_followers": 1,
-        "num_edits": 2,
-        "duration_ms": 2657366,
-        "num_artists": 6,
+with open('./SpotifyDataset/file1.json') as f:
+    rawData = json.load(f)
+
+allPlaylists = rawData["playlists"]
+
+data = []
+results = []
+for i in range (0,len(allPlaylists)):
+	playlist = {
+		"collaborative": allPlaylists[i]["collaborative"],
+		"num_tracks": allPlaylists[i]["num_tracks"],
+		"num_albums": allPlaylists[i]["num_albums"],
+
 	}
+	data.append(playlist)
+	results.append(allPlaylists[i]["num_followers"])
 
-json_parsed = json.loads(json_data)
-
-print json_parsed[‘name’]
-
+print(data)
+print(results)
