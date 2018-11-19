@@ -999,3 +999,5 @@ false,17,17,1,13,3699248,15
 false,98,119,1,63,27538723,82
 false,75,108,1,37,24950143,40
 false,43,44,1,34,9065801,37
+collaborative,num_albums,num_tracks,num_followers,num_edits,duration_ms,num_artists
+collaborative,num_albums,num_tracks,num_followers,num_edits,duration_ms,num_artists
