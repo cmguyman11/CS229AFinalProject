@@ -58,6 +58,10 @@ for d in allPlaylists:
 	del d["pid"]
 	del d["modified_at"]
 	del d["tracks"]
+	if (d["collaborative"] == "false"):
+		d["collaborative"] = 0
+	else:
+		d["collaborative"] = 1
 	if d.has_key("description"):
 		del d["description"]
 	if count == 0:
@@ -74,6 +78,10 @@ for d in allPlaylists1:
 	del d["pid"]
 	del d["modified_at"]
 	del d["tracks"]
+	if (d["collaborative"] == "false"):
+		d["collaborative"] = 0
+	else:
+		d["collaborative"] = 1
 	if d.has_key("description"):
 		del d["description"]
 	if count == 0:
@@ -90,6 +98,10 @@ for d in allPlaylists2:
 	del d["pid"]
 	del d["modified_at"]
 	del d["tracks"]
+	if (d["collaborative"] == "false"):
+		d["collaborative"] = 0
+	else:
+		d["collaborative"] = 1
 	if d.has_key("description"):
 		del d["description"]
 	if count == 0:
@@ -106,6 +118,10 @@ for d in allPlaylists3:
 	del d["pid"]
 	del d["modified_at"]
 	del d["tracks"]
+	if (d["collaborative"] == "false"):
+		d["collaborative"] = 0
+	else:
+		d["collaborative"] = 1
 	if d.has_key("description"):
 		del d["description"]
 	if count == 0:
